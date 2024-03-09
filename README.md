@@ -9,7 +9,7 @@ Este é um projeto de blog desenvolvido em Node.js com EJS para criação, visua
 - 🚀 **Totalmente Escalável e Personalizável:** Adapte o blog de acordo com suas necessidades, adicionando novos recursos, customizando o design e até mesmo integrando com outras plataformas e serviços.
 
 ## Como Começar:
-1. Clone este repositório utilizando o comando `git clone https://github.com/seu-usuario/seu-projeto.git`.
+1. Clone este repositório utilizando o comando `git clone https://github.com/TaviloBreno/blog-node.git`.
 2. Instale as dependências utilizando o comando `npm install`.
 3. Inicie o servidor executando `npm start`.
 4. Acesse o blog em seu navegador utilizando o endereço `http://localhost:3000`.
