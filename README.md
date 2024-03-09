@@ -1,4 +1,4 @@
-# 🚀 Bem-vindo ao Projeto Blog Node.js 📝
+# 🚀 Bem-vindo ao NodeWriter 📝
 
 Este é um projeto de blog desenvolvido em Node.js com EJS para criação, visualização, edição e exclusão de postagens. 💻
 
