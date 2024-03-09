@@ -73,5 +73,32 @@ router.get("/admin/categories/edit/:id", (req, res) => {
     });
 });
 
+router.post("/categories/update", (req, res) => {
+  var id = req.body.id;
+  var newTitle = req.body.title;
+
+  // Gerar o novo slug a partir do novo título usando o slugify
+  var newSlug = slugify(newTitle, { lower: true, remove: /[*+~.()'"!:@]/g });
+
+  Category.update(
+    {
+      title: newTitle,
+      slug: newSlug, // Atualiza também o slug
+    },
+    {
+      where: {
+        id: id,
+      },
+    }
+  )
+    .then(() => {
+      return res.redirect("/admin/categories");
+    })
+    .catch((error) => {
+      console.error("Erro ao atualizar categoria:", error);
+      return res.redirect("/admin/categories");
+    });
+});
+
 
 module.exports = router;
