@@ -1,31 +1,44 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
-const connection = require('./database/database');
-const categoriesController = require('./categories/CategoriesController');
-const articlesController = require('./articles/ArticlesController');
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const connection = require("./database/database");
+const categoriesController = require("./categories/CategoriesController");
+const articlesController = require("./articles/ArticlesController");
+const usersController = require("./users/UsersController");
+const User = require("./users/User"); // Importe o modelo User
 const Article = require('./articles/Article');
-const Category = require('./categories/Category');
-
 
 app.set("view engine", "ejs");
 
-app.use(express.static('public'));
+app.use(
+  session({
+    secret: "qualquercoisa",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 30000000 },
+  })
+);
 
-app.use(bodyParser.urlencoded( { extended: true } ));
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Sincronize o modelo User com o banco de dados
 connection
-    .authenticate()
-    .then(() => {
-        console.log('Conexão feita com sucesso!');
-    }).catch((error) => {
-        console.log(error);
-    });
+  .sync()
+  .then(() => {
+    console.log("Tabela de usuários sincronizada com sucesso.");
+  })
+  .catch((err) => {
+    console.error("Erro ao sincronizar a tabela de usuários:", err);
+  });
 
+// Rotas da sua aplicação...
 app.use("/", categoriesController);
 app.use("/", articlesController);
-    
+app.use("/", usersController);
+
 app.get("/", (req, res) => {
   Article.findAll({
     order: [["id", "DESC"]],
@@ -84,6 +97,5 @@ app.get("/category/:slug", (req, res) => {
 });
 
 app.listen(8080, () => {
-    console.log('O servidor está rodando!');
+  console.log("O servidor está rodando!");
 });
-
