@@ -24,9 +24,17 @@ connection
     });
 
     
-app.get('/', (req, res) => {
-        res.render( 'index' );
+app.get("/", (req, res) => {
+  Article.findAll({
+    order: [["id", "DESC"]],
+    limit: 4,
+  }).then((articles) => {
+    Category.findAll().then((categories) => {
+      res.render("index", { articles: articles, categories: categories });
     });
+  });
+});
+
 
 app.use('/', categoriesController);
 app.use('/', articlesController);
