@@ -1,5 +1,5 @@
-<%- include('../../partials/header.ejs') %>
-<%- include('../../partials/navbar.ejs') %>
+<%- include('../../partials/header.ejs') %> <%-
+include('../../partials/navbar.ejs') %>
 
 <div class="container">
   <hr />
@@ -17,18 +17,26 @@
       </tr>
     </thead>
     <tbody>
-     
+      <% articles.forEach(article => { %>
+      <tr>
+        <td><%= article.id %></td>
+        <td><%= article.title %></td>
+        <td><%= article.slug %></td>
+        <td><%= article.categoryId %></td>
+        <td>Ações</td>
+      </tr>
+      <% }) %>
     </tbody>
   </table>
 </div>
 
 <%- include('../../partials/footer.ejs') %>
 <script>
-    function confirmarDelecao(event, form){
-        event.preventDefault();
-        var decision = confirm('Você deseja deletar essa categoria?');
-        if(decision){
-            form.submit();
-        }
+  function confirmarDelecao(event, form) {
+    event.preventDefault();
+    var decision = confirm("Você deseja deletar essa categoria?");
+    if (decision) {
+      form.submit();
     }
+  }
 </script>
