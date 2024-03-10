@@ -26,9 +26,9 @@ Este é um projeto de blog desenvolvido em Node.js com EJS para criação, visua
 ## Desenvolvedor:
 - **Nome:** Tavilo Breno
 - **Redes Sociais:**
-  - Instagram: [link para o Instagram](https://www.instagram.com/seu-usuario/) 📸
+  - Instagram: [link para o Instagram](https://www.instagram.com/bweb02/) 📸
   - Facebook: [link para o Facebook](https://www.facebook.com/seu-usuario/) 📘
-  - LinkedIn: [link para o LinkedIn](https://www.linkedin.com/in/seu-usuario/) 🔗
+  - LinkedIn: [link para o LinkedIn](www.linkedin.com/in/tavilo-breno-barbosa-pessoa-b11238a2) 🔗
   - WhatsApp: [link para o WhatsApp](https://api.whatsapp.com/send?phone=seu-numero) 📱
 
 ## Licença:
