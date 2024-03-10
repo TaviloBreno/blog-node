@@ -8,6 +8,7 @@ const articlesController = require("./articles/ArticlesController");
 const usersController = require("./users/UsersController");
 const User = require("./users/User"); // Importe o modelo User
 const Article = require('./articles/Article');
+const Category = require('./categories/Category');
 
 app.set("view engine", "ejs");
 
