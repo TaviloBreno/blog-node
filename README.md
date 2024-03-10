@@ -35,7 +35,7 @@ Este é um projeto de blog desenvolvido em Node.js com EJS para criação, visua
 - **Redes Sociais:**
   - Instagram: [link para o Instagram](https://www.instagram.com/bweb02/) 📸
   - LinkedIn: [link para o LinkedIn](https://www.linkedin.com/in/tavilo-breno-barbosa-pessoa-b11238a2/) 🔗
-  - WhatsApp: [link para o WhatsApp](https://api.whatsapp.com/send?+558899523366) 📱
+  - WhatsApp: [link para o WhatsApp](https://api.whatsapp.com/send?phone=558899523366) 📱
 
 ## Licença:
 Este projeto é licenciado sob a [MIT License](LICENSE), o que significa que você pode usá-lo livremente, inclusive para fins comerciais.
