@@ -15,7 +15,7 @@ Este é um projeto de blog desenvolvido em Node.js com EJS para criação, visua
 4. Acesse o blog em seu navegador utilizando o endereço `http://localhost:3000`.
 
 ## Adição de Imagens do Sistema
-[Imagem da Home do site](/modulo_07/public/img/Captura%20de%20tela%202024-03-10%20113246.png)
+[Imagem da Home do site](public/img/Captura%20de%20tela%202024-03-10%20113246.png)
 [Imagem de uma categoria dinãmica](/modulo_07/public/img/Captura%20de%20tela%202024-03-10%20113313.png)
 [Imagem do login](/modulo_07/public/img/Captura%20de%20tela%202024-03-10%20113344.png)
 [Imagem da listagem de categoria](/modulo_07/public/img/Captura%20de%20tela%202024-03-10%20113404.png)
